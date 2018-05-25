@@ -1,0 +1,13 @@
+{
+    "name": "mpx-webpack-plugin",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --config=./examples/webpack.config.js"
+    },
+    "devDependencies": {
+        "tapable": "^1.0.0",
+        "webpack": "^4.8.3",
+        "webpack-cli": "^2.1.4"
+    }
+}

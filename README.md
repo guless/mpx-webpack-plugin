@@ -8,6 +8,10 @@
 - [**wepy**](https://github.com/Tencent/wepy) - 小程序组件化开发框架。类 vue 风格，已经被官方(Tencent)收编。
 - [**wxapp-webpack-plugin**](https://github.com/Cap32/wxapp-webpack-plugin) - 📦 微信小程序 webpack 插件。也是单纯的 webpack 编译支持。
 
+  
+相关资料
+-------
+- [mpx-webpack-plugin-examples](./examples) - 一个完整的示例项目。
 
 起步
 ----
@@ -86,39 +90,49 @@ module.exports = [
 
 - [单一入口点语法(Single Entry Syntax)](https://webpack.js.org/concepts/entry-points/#single-entry-shorthand-syntax)
   - 语法：`entry: string|Array<string>`
-  - 示例(1)：`entry: "./src/app"`
-  - 示例(2)：`entry: ["./src/app"]`
+  ```
+  entry: "./src/app"
+  entry: ["./src/app"]
+  ```
   
 - [对象语法(Object Syntax)](https://webpack.js.org/concepts/entry-points/#object-syntax)
   - 语法：`entry: {[entryChunkName: string]: string|Array<string>}`
-  - 示例(1)：`entry: { "app": "./src/app" }`
-  - 示例(2)：`entry: { "app": ["./src/app"] }`
   - 说明：使用对象语法(Object Syntax)时 `entryChunkName` 必须使用 `"app"`，因为小程序平台默认找名为 `"app"` 的文件作为应用程序入口点。
+  ```
+  entry: { "app": "./src/app" }
+  entry: { "app": ["./src/app"] }
+  ```
   
 - [动态入口点语法(Dynamic Syntax)](https://webpack.js.org/configuration/entry-context/#dynamic-entry)
   - 语法：`entry: () => (Single Entry Syntax)|(Object Syntax)|Promise<(Single Entry Syntax)|(Object Syntax)>`
-  - 示例(1)：`entry: () => "./src/app"`
-  - 示例(2)：`entry: () => ["./src/app"]`
-  - 示例(3)：`entry: () => ({ "app": "./src/app" })`
-  - 示例(4)：`entry: () => Promise.resolve("./src/app")`
-  - 示例(5)：`entry: () => Promise.resolve({ "app": "./src/app" })`
+  ```
+  entry: () => "./src/app"
+  entry: () => ["./src/app"]
+  entry: () => ({ "app": "./src/app" })
+  entry: () => Promise.resolve("./src/app")
+  entry: () => Promise.resolve({ "app": "./src/app" })
+  ```
   
 ### 文件匹配规则
 一个小程序的应用程序(application)、页面(page)、组件(component)通常由多个文件组成(wxml|swan|axml, css, js, json)。为了方便开发人员定义文件引用，插件提供文件匹配功能来自动匹配相关的应用程序、页面、组件等文件。
 
-- 1，**完全匹配文件。**
+- 1，**完全匹配文件名称。**
+  - 格式：`<dirname>/[name].[ext]`
   - 示例：`"./src/app.js"`
   - 说明：仅包含 `./src/app.js` 一个文件。
   
-- 2，**仅匹配文件名称(忽略后缀名）。**
+- 2，**仅匹配文件名(忽略后缀名）。**
+  - 格式：`<dirname>/[name]`
   - 示例：`"./src/app"`
   - 说明：包含 `src` 目录下所有名为 `app.*` 的文件。
   
 - 3，**匹配目录中的文件(不会递归子目录，必须以反斜杠(`/`)结尾）。**
+  - 格式：`<dirname>/`
   - 示例：`"./src/"`
   - 说明：包含 `src` 目录下的所有文件。
   
-- 4，**[glob](https://github.com/isaacs/node-glob) 搜索模式。**
+- 4，**任意 [glob](https://github.com/isaacs/node-glob) 匹配模式。**
+  - 格式：`<glob-pattern>` @see [https://github.com/isaacs/node-glob](https://github.com/isaacs/node-glob)
   - 示例：`"./src/**/*"`
   - 说明：包含 `src` 以及其子目录中的所有文件。
   
@@ -150,7 +164,7 @@ module.exports = [
 
 所有的应用程序(application)、页面(page)、以及组件(component)都支持这种文件匹配规则：
 
-**1，指定配置应用程序(application)匹配规则**
+**1，指定应用程序(application)匹配规则**
 ```js
 /// webpack.config.js
 module.exports = {
@@ -184,9 +198,12 @@ module.exports = {
 }
 ```
 
-### 指定特定平台的文件
+### 特定平台的文件
 为了尽可能的在多个平台(platform)之间复用代码，通常我们只会编写一份代码。但是由于各个平台实现之间的差异，可以通过特定平台的名称
-作为**文件后缀**来指定该平台下特殊的实现，例如：
+作为**文件后缀**来指定该平台下特殊的实现：
+
+- 格式：`[name].[platform].[extname]`
+- 示例：`"app.baidu.js"`
 
 ```
 |- <src>
@@ -196,7 +213,7 @@ module.exports = {
 |  |- app.scss
 ```
 
-下面这个表列出了使用 `"./src/app"` 匹配规则所对应平台的文件列表：
+下面这个表列出了使用 `"./src/app"` 匹配规则对应上述示例中的文件列表：
 
  平台名称     | 文件列表
 ------------|----------------
@@ -211,9 +228,4 @@ MPXPlugin( options )
   - `"wechat"`：微信小程序平台。
   - `"alipay"`：支付宝小程序平台。
   - `"baidu"`：百度小程序平台。
-  
-  
-完整的示例项目
-------------
-- [mpx-webpack-plugin-examples](./examples)
   

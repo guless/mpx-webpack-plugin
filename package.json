@@ -8,9 +8,9 @@
     "dependencies": {
         "glob": "^7.1.2",
         "tapable": "^1.0.0",
-        "webpack": "^4.8.3"
     },
     "devDependencies": {
+        "webpack": "^4.8.3",
         "webpack-cli": "^2.1.4"
     }
 }

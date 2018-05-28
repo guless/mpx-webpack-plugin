@@ -22,7 +22,6 @@ npm i mpx-webpack-plugin --save-dev
 
 配置 webpack.config.js
 ---------------------
-**单个平台的 webpack 配置文件**
 ```js
 const MPXPlugin = require("mpx-webpack-plugin");
 const path = require("path");
@@ -40,7 +39,9 @@ module.exports = {
     ]
 };
 ```
-**多个平台的 webpack 配置文件**
+
+> 通过 `webpack.config.js` 导出多份配置文件，可以一次性编译成多个平台的小程序。
+
 ```js
 const MPXPlugin = require("mpx-webpack-plugin");
 const path = require("path");
@@ -62,18 +63,6 @@ module.exports = [
         "context": __dirname,
         "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
         "output": {
-            "path": path.resolve(__dirname, "./dist/alipay/"),
-            "filename": "[name].js"
-        },
-        
-        "plugins": [
-            new MPXPlugin({ "platform": "alipay" })
-        ]
-    },
-    {
-        "context": __dirname,
-        "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
-        "output": {
             "path": path.resolve(__dirname, "./dist/baidu/"),
             "filename": "[name].js"
         },
@@ -81,9 +70,16 @@ module.exports = [
         "plugins": [
             new MPXPlugin({ "platform": "baidu" })
         ]
-    }
+    },
 ];
 ```
+
+MPXPlugin( options )
+--------------------
+- `{string} [options.platform="wechat"]` - 指定运行的小程序平台，可选值：`["wechat", "alipay", "baidu"]`。
+  - `"wechat"`：微信小程序平台。
+  - `"alipay"`：支付宝小程序平台。
+  - `"baidu"`：百度小程序平台。
 
 ### 入口点(entry-points)说明
 定义小程序入口点(entry-points)可以通过以下 3 种配置方式：
@@ -223,12 +219,6 @@ module.exports = {
  `"wechat"` | "src/app.js", "src/app.json", "src/app.scss"
  `"alipay"` | "src/app.js", "src/app.json", "src/app.scss"
  `"baidu"`  | "src/app.baidu.js", "src/app.json", "src/app.scss"
-
-
-MPXPlugin( options )
---------------------
-- `{string} [options.platform="wechat"]` - 指定运行的小程序平台，可选值：`["wechat", "alipay", "baidu"]`。
-  - `"wechat"`：微信小程序平台。
-  - `"alipay"`：支付宝小程序平台。
-  - `"baidu"`：百度小程序平台。
+ 
+ ### 使用绝对路径
   

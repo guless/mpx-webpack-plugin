@@ -89,14 +89,14 @@ module.exports = [
 定义小程序入口点(entry-points)可以通过以下 3 种配置方式：
 
 - [单一入口点语法(Single Entry Syntax)](https://webpack.js.org/concepts/entry-points/#single-entry-shorthand-syntax)
-  - 语法：`entry: string|Array<string>`
+  - 格式：`entry: string|Array<string>`
   ```
   entry: "./src/app"
   entry: ["./src/app"]
   ```
   
 - [对象语法(Object Syntax)](https://webpack.js.org/concepts/entry-points/#object-syntax)
-  - 语法：`entry: {[entryChunkName: string]: string|Array<string>}`
+  - 格式：`entry: {[entryChunkName: string]: string|Array<string>}`
   - 说明：使用对象语法(Object Syntax)时 `entryChunkName` 必须使用 `"app"`，因为小程序平台默认找名为 `"app"` 的文件作为应用程序入口点。
   ```
   entry: { "app": "./src/app" }
@@ -104,7 +104,7 @@ module.exports = [
   ```
   
 - [动态入口点语法(Dynamic Syntax)](https://webpack.js.org/configuration/entry-context/#dynamic-entry)
-  - 语法：`entry: () => (Single Entry Syntax)|(Object Syntax)|Promise<(Single Entry Syntax)|(Object Syntax)>`
+  - 格式：`entry: () => (Single Entry Syntax)|(Object Syntax)|Promise<(Single Entry Syntax)|(Object Syntax)>`
   ```
   entry: () => "./src/app"
   entry: () => ["./src/app"]

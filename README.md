@@ -104,7 +104,7 @@ module.exports = [
   - 示例(5)：`entry: () => Promise.resolve({ "app": "./src/app" })`
   
 ### 文件匹配规则
-一个小程序的应用程序(application)、页面(page)、组件(component)通常由多个文件组成(wxml|swan|axml, css, js, json)。为了方便开发人员定义文件引用插件提供文件匹配功能来自动匹配相关的应用程序、页面、组件等文件。
+一个小程序的应用程序(application)、页面(page)、组件(component)通常由多个文件组成(wxml|swan|axml, css, js, json)。为了方便开发人员定义文件引用，插件提供文件匹配功能来自动匹配相关的应用程序、页面、组件等文件。
 
 - 1，**完全匹配文件。**
   - 示例：`"./src/app.js"`

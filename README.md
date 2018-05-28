@@ -28,7 +28,7 @@ const path = require("path");
 
 module.exports = {
     "context": __dirname,
-    "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
+    "entry": "./src/app", // 具体如何配置入口点，请参考下面的【小程序入口点(entry-points)】。
     "output": {
         "path": path.resolve(__dirname, "./dist"),
         "filename": "[name].js"
@@ -49,7 +49,7 @@ const path = require("path");
 module.exports = [
     {
         "context": __dirname,
-        "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
+        "entry": "./src/app", // 具体如何配置入口点，请参考下面的【小程序入口点(entry-points)】。
         "output": {
             "path": path.resolve(__dirname, "./dist/wechat/"),
             "filename": "[name].js"
@@ -61,7 +61,7 @@ module.exports = [
     },
     {
         "context": __dirname,
-        "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
+        "entry": "./src/app", // 具体如何配置入口点，请参考下面的【小程序入口点(entry-points)】。
         "output": {
             "path": path.resolve(__dirname, "./dist/baidu/"),
             "filename": "[name].js"
@@ -82,8 +82,8 @@ MPXPlugin( options )
   - `"baidu"`：百度小程序平台。
 
 
-入口点(entry-points)说明
------------------------
+小程序入口点(entry-points)
+------------------------
 定义小程序入口点(entry-points)可以通过以下 3 种配置方式：
 
 - [单一入口点语法(Single Entry Syntax)](https://webpack.js.org/concepts/entry-points/#single-entry-shorthand-syntax)

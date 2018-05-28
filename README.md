@@ -2,16 +2,12 @@
 > - 该插件仅支持 webpack@4.0 以上的版本。
 > - 该插件仅为使用原生小程序平台提供功能做 webpack 编译支持，因此不提供 `虚拟DOM(Visual DOM)` 支持。如果你喜欢 `VUE` 的开发模式，建议使用 [mpvue](https://github.com/Meituan-Dianping/mpvue) 等其他框架进行开发。
 
-其他类似的项目
-------------
+相关资料
+-------
+- [**mpx-webpack-plugin-examples**](./examples) - 一个完整的示例项目。
 - [**mpvue**](https://github.com/Meituan-Dianping/mpvue) - 基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。
 - [**wepy**](https://github.com/Tencent/wepy) - 小程序组件化开发框架。类 vue 风格，已经被官方(Tencent)收编。
 - [**wxapp-webpack-plugin**](https://github.com/Cap32/wxapp-webpack-plugin) - 📦 微信小程序 webpack 插件。也是单纯的 webpack 编译支持。
-
-  
-相关资料
--------
-- [mpx-webpack-plugin-examples](./examples) - 一个完整的示例项目。
 
 起步
 ----

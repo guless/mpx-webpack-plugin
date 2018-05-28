@@ -160,7 +160,7 @@ module.exports = {
 ```
 
 **2，指定页面(page)匹配规则**
-```json
+```js
 /// app.json
 {
     ...
@@ -173,7 +173,7 @@ module.exports = {
 ```
 
 **3，指定组件(component)匹配规则**
-```json
+```js
 /// page.json
 {
     ...

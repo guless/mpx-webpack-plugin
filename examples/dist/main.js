@@ -71,9 +71,23 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 console.log("app");
+
+/***/ }),
+/* 2 */
+/***/ (function(module) {
+
+module.exports = {};
 
 /***/ })
 /******/ ]);

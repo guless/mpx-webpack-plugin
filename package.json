@@ -5,9 +5,12 @@
     "scripts": {
         "build": "webpack --config=./examples/webpack.config.js"
     },
-    "devDependencies": {
+    "dependencies": {
+        "glob": "^7.1.2",
         "tapable": "^1.0.0",
         "webpack": "^4.8.3",
+    },
+    "devDependencies": {
         "webpack-cli": "^2.1.4"
     }
 }

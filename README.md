@@ -1,6 +1,6 @@
->⚠️注意：该插件仅支持 webpack@4.0 以上的版本。
-
->⚠️注意：该插件仅为使用原生小程序平台提供功能做 webpack 编译支持，因此不提供任何 `组件(component)`、`虚拟DOM(Visual DOM)`支持。如果你喜欢 `VUE` 的开发模式，建议使用 [mpvue](https://github.com/Meituan-Dianping/mpvue) 等其他框架进行开发。
+> ⚠️注意：
+> - 该插件仅支持 webpack@4.0 以上的版本。
+> - 该插件仅为使用原生小程序平台提供功能做 webpack 编译支持，因此不提供 `虚拟DOM(Visual DOM)` 支持。如果你喜欢 `VUE` 的开发模式，建议使用 [mpvue](https://github.com/Meituan-Dianping/mpvue) 等其他框架进行开发。
 
 其他类似的项目
 ------------
@@ -222,5 +222,52 @@ module.exports = {
  `"alipay"` | "src/app.js", "src/app.json", "src/app.scss"
  `"baidu"`  | "src/app.baidu.js", "src/app.json", "src/app.scss"
  
- ### 使用绝对路径
+### 使用绝对路径
+不建议在项目中使用绝对路径。但是如果在项目中使用**绝对路径**，则插件会将该路径设置成相对于应用程序(app)所在的目录的相对路径：
+```
+|- <src>
+|  |- <images>
+|  |  |- sprite.png
+|  |
+|  |- <components>
+|  |  |- custom.js
+|  |  |- custom.wxml
+|  |  |- custom.json
+|  |  |- custom.scss
+|  |
+|  |- <pages>
+|  |  |- index.js
+|  |  |- index.wxml
+|  |  |- index.json
+|  |  |- index.scss
+|  |
+|  |- app.js
+|  |- app.baidu.js
+|  |- app.json
+|  |- app.scss
+```
+```js
+/// app.json
+{
+    ...
+    "pages": [
+        "/pages/index"  /// 相对于 "src" 目录。
+    ]
+}
+```
+```js
+/// index.json
+{
+    ...,
+    "usingComponents": {
+        "custom-tag": "../components/custom", /// 相对于 "src/pages" 目录（当前 index.json 所在的目录）。
+        "custom-tag": "/components/custom",   /// 相对于 "src" 目录。
+    }
+}
+```
+```html
+<!-- index.wxml -->
+<image src="../images/sprite.png" /><!-- 相对于 "src/pages" 目录 -->
+<image src="/images/sprite.png" /><!-- 相对于 "src" 目录 -->
+```
   

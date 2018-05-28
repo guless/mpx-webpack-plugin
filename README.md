@@ -266,4 +266,11 @@ module.exports = {
 <image src="../images/sprite.png" /><!-- 相对于 "src/pages" 目录 -->
 <image src="/images/sprite.png" /><!-- 相对于 "src" 目录 -->
 ```
+```scss
+/// custom.scss
+button {
+    background: url("../images/sprite.png");  /*< 相对于 "src/components" 目录 >*/
+    background: url("/images/sprite.png");    /*< 相对于 "src" 目录 >*/
+}
+```
   

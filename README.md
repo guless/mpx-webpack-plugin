@@ -4,7 +4,7 @@
 
 相关资料
 -------
-- [**mpx-webpack-plugin-examples**](./examples) - 一个完整的示例项目。
+- [**mpx-examples**](./examples) - `mpx-webpack-plugin` 插件示例项目。
 - [**mpvue**](https://github.com/Meituan-Dianping/mpvue) - 基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。
 - [**wepy**](https://github.com/Tencent/wepy) - 小程序组件化开发框架。类 vue 风格，已经被官方(Tencent)收编。
 - [**wxapp-webpack-plugin**](https://github.com/Cap32/wxapp-webpack-plugin) - 📦 微信小程序 webpack 插件。也是单纯的 webpack 编译支持。

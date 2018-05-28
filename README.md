@@ -40,7 +40,7 @@ module.exports = {
 };
 ```
 
-> 通过 `webpack.config.js` 导出多份配置文件，可以一次性编译成多个平台的小程序。
+通过 `webpack.config.js` 导出多份配置文件，可以一次性编译成多个平台的小程序。
 
 ```js
 const MPXPlugin = require("mpx-webpack-plugin");
@@ -81,7 +81,9 @@ MPXPlugin( options )
   - `"alipay"`：支付宝小程序平台。
   - `"baidu"`：百度小程序平台。
 
-### 入口点(entry-points)说明
+
+入口点(entry-points)说明
+-----------------------
 定义小程序入口点(entry-points)可以通过以下 3 种配置方式：
 
 - [单一入口点语法(Single Entry Syntax)](https://webpack.js.org/concepts/entry-points/#single-entry-shorthand-syntax)

@@ -18,12 +18,12 @@ npm i mpx-webpack-plugin --save-dev
 
 配置 webpack.config.js
 ---------------------
+**单个平台的 webpack 配置文件**
 ```js
 const MPXPlugin = require("mpx-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-    "mode": "none",
     "context": __dirname,
     "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
     "output": {
@@ -34,24 +34,68 @@ module.exports = {
     "plugins": [
         new MPXPlugin({ "platform": "wechat" })
     ]
-}
+};
+```
+**多个平台的 webpack 配置文件**
+```js
+const MPXPlugin = require("mpx-webpack-plugin");
+const path = require("path");
+
+module.exports = [
+    {
+        "context": __dirname,
+        "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
+        "output": {
+            "path": path.resolve(__dirname, "./dist/wechat/"),
+            "filename": "[name].js"
+        },
+        
+        "plugins": [
+            new MPXPlugin({ "platform": "wechat" })
+        ]
+    },
+    {
+        "context": __dirname,
+        "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
+        "output": {
+            "path": path.resolve(__dirname, "./dist/alipay/"),
+            "filename": "[name].js"
+        },
+        
+        "plugins": [
+            new MPXPlugin({ "platform": "alipay" })
+        ]
+    },
+    {
+        "context": __dirname,
+        "entry": "./src/app", // 具体如何配置入口点，请参考下面的【入口点(entry-points)说明】。
+        "output": {
+            "path": path.resolve(__dirname, "./dist/baidu/"),
+            "filename": "[name].js"
+        },
+        
+        "plugins": [
+            new MPXPlugin({ "platform": "baidu" })
+        ]
+    }
+];
 ```
 
 ### 入口点(entry-points)说明
 定义小程序入口点(entry-points)可以通过以下 3 种配置方式：
 
-- 单一入口点语法([Single Entry Syntax](https://webpack.js.org/concepts/entry-points/#single-entry-shorthand-syntax))
+- [单一入口点语法(Single Entry Syntax)](https://webpack.js.org/concepts/entry-points/#single-entry-shorthand-syntax)
   - 语法：`entry: string|Array<string>`
   - 示例(1)：`entry: "./src/app"`
   - 示例(2)：`entry: ["./src/app"]`
   
-- 对象语法([Object Syntax](https://webpack.js.org/concepts/entry-points/#object-syntax))
+- [对象语法(Object Syntax)](https://webpack.js.org/concepts/entry-points/#object-syntax)
   - 语法：`entry: {[entryChunkName: string]: string|Array<string>}`
   - 示例(1)：`entry: { "app": "./src/app" }`
   - 示例(2)：`entry: { "app": ["./src/app"] }`
   - 说明：使用对象语法(Object Syntax)时 `entryChunkName` 必须使用 `"app"`，因为小程序平台默认找名为 `"app"` 的文件作为应用程序入口点。
   
-- 动态入口点语法([Dynamic Syntax](https://webpack.js.org/configuration/entry-context/#dynamic-entry))
+- [动态入口点语法(Dynamic Syntax)](https://webpack.js.org/configuration/entry-context/#dynamic-entry)
   - 语法：`entry: () => (Single Entry Syntax)|(Object Syntax)|Promise<(Single Entry Syntax)|(Object Syntax)>`
   - 示例(1)：`entry: () => "./src/app"`
   - 示例(2)：`entry: () => ["./src/app"]`
@@ -66,19 +110,20 @@ module.exports = {
   - 示例：`"./src/app.js"`
   - 说明：仅包含 `./src/app.js` 一个文件。
   
-- 2，仅匹配文件名称(忽略后缀名）。
+- 2，**仅匹配文件名称(忽略后缀名）。**
   - 示例：`"./src/app"`
   - 说明：包含 `src` 目录下所有名为 `app.*` 的文件。
   
-- 3，匹配目录中的文件(不会递归子目录，必须以反斜杠(`/`)结尾）。
+- 3，**匹配目录中的文件(不会递归子目录，必须以反斜杠(`/`)结尾）。**
   - 示例：`"./src/"`
   - 说明：包含 `src` 目录下的所有文件。
   
-- 4，[glob](https://github.com/isaacs/node-glob) 搜索模式。
+- 4，**[glob](https://github.com/isaacs/node-glob) 搜索模式。**
   - 示例：`"./src/**/*"`
   - 说明：包含 `src` 以及其子目录中的所有文件。
   
 假设我们有这样的目录结构：
+
 ```
 |- <src>
 |  |- <pages>
@@ -92,15 +137,72 @@ module.exports = {
 |  |- app.scss
 |  |- others.js
 ```
+
 下面这张表列出对应的匹配结果：
 
- 匹配规则(pattern)   | 结果(files)
+ 匹配规则            | 文件列表
 --------------------|----------------
  `"./src/app.js"`   | "src/app.js"
  `"./src/app"`      | "src/app.js", "src/app.json", "src/app.scss"
  `"./src/"`         | "src/others.js", "src/app.js", "src/app.json", "src/app.scss"
  `"./src/pages/"`   | "pages/index.js", "pages/index.wxml", "pages/index.json", "pages/index.scss"
  `"./src/**/*"`     | <所有文件>
+
+所有的应用程序(application)、页面(page)、以及组件(component)都支持这种文件匹配规则：
+
+**1，指定配置应用程序(application)匹配规则**
+```js
+/// webpack.config.js
+module.exports = {
+    ...
+    "entry": "./src/app.*" // 使用 glob 匹配应用程序文件。
+};
+```
+
+**2，指定页面(page)匹配规则**
+```json
+/// app.json
+{
+    ...
+    "pages": [
+        "./pages/index",   // 第一个页面为默认为首页。
+        "./pages/**/*",    // 重复的页面会被去除，因此不必担心重复定义。
+        "./other-pages/"
+    ]
+}
+```
+
+**3，指定组件(component)匹配规则**
+```json
+/// page.json
+{
+    ...
+    "usingComponents": {
+        "tag-name-1": "../components/custom-component.*",
+        "tag-name-2": "../components/custom-component-directory/"
+    }
+}
+```
+
+### 指定特定平台的文件
+为了尽可能的在多个平台(platform)之间复用代码，通常我们只会编写一份代码。但是由于各个平台实现之间的差异，可以通过特定平台的名称
+作为**文件后缀**来指定该平台下特殊的实现，例如：
+
+```
+|- <src>
+|  |- app.js
+|  |- app.baidu.js
+|  |- app.json
+|  |- app.scss
+```
+
+下面这个表列出了使用 `"./src/app"` 匹配规则所对应平台的文件列表：
+
+ 平台名称     | 文件列表
+------------|----------------
+ `"wechat"` | "src/app.js", "src/app.json", "src/app.scss"
+ `"alipay"` | "src/app.js", "src/app.json", "src/app.scss"
+ `"baidu"`  | "src/app.baidu.js", "src/app.json", "src/app.scss"
 
 
 MPXPlugin( options )
@@ -109,4 +211,9 @@ MPXPlugin( options )
   - `"wechat"`：微信小程序平台。
   - `"alipay"`：支付宝小程序平台。
   - `"baidu"`：百度小程序平台。
+  
+  
+完整的示例项目
+------------
+- [mpx-webpack-plugin-examples](./examples)
   

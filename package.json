@@ -6,10 +6,13 @@
         "build": "webpack --config=./examples/webpack.config.js"
     },
     "dependencies": {
+        "enhanced-resolve": "^4.0.0",
         "glob": "^7.1.2",
-        "tapable": "^1.0.0",
+        "tapable": "^1.0.0"
     },
     "devDependencies": {
+        "@types/node": "^10.1.4",
+        "@types/tapable": "^1.0.2",
         "webpack": "^4.8.3",
         "webpack-cli": "^2.1.4"
     }

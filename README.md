@@ -109,7 +109,7 @@ module.exports = [
 
  类型      | 名称     | 默认值         | 说明
 ----------|----------|---------------|--------------------
- {string} | name     | `"app"`       | 指定小程序入口点的名称。如果使用单一入口点语法(Single Entry Syntax)，则忽略该字段。
+ {string} | name     | `"app"`       | 指定小程序入口点的名称。如果使用对象语法(Object Syntax)配置 `entry`，则插件通过该字段查找小程序的入口点。
  {string} | platform | `"wechat"`    | 指定运行的小程序平台，可选值：`["wechat", "alipay", "baidu"]`。<ul><li>`"wechat"`：微信小程序。</li><li>`"alipay"`：支付宝小程序。</li><li>`"baidu"`：百度小程序。</li></ul>
   
   

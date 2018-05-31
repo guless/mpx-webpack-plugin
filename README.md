@@ -1,3 +1,6 @@
+原生小程序开发套装(Mini Program X)
+-------------------------------
+
 > ⚠️注意：
 > - 该插件仅支持 webpack@4.0 以上的版本。
 > - 该插件仅为使用原生小程序平台提供功能做 webpack 编译支持，因此不提供 `虚拟DOM(Visual DOM)` 支持。如果你喜欢 `VUE` 的开发模式，建议使用 [mpvue](https://github.com/Meituan-Dianping/mpvue) 等其他框架进行开发。
@@ -110,5 +113,5 @@ module.exports = [
  {string} | platform | `"wechat"`    | 指定运行的小程序平台，可选值：`["wechat", "alipay", "baidu"]`。<ul><li>`"wechat"`：微信小程序。</li><li>`"alipay"`：支付宝小程序。</li><li>`"baidu"`：百度小程序。</li></ul>
   
   
-文件解析规则
-----------
+文件解析规则(Resolver)
+--------------------

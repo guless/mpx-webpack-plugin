@@ -78,18 +78,21 @@ module.exports = [
 
 - [单一入口点语法(Single Entry Syntax)](https://webpack.js.org/concepts/entry-points/#single-entry-shorthand-syntax)
   - 格式：`entry: string`
+  - 示例：
     ```
     entry: "./src/app"
     ```
   
 - [对象语法(Object Syntax)](https://webpack.js.org/concepts/entry-points/#object-syntax)
   - 格式：`entry: {[entryChunkName: string]: string}`
+  - 示例：
     ```
     entry: { "app": "./src/app" }
     ```
   
 - [动态入口点语法(Dynamic Syntax)](https://webpack.js.org/configuration/entry-context/#dynamic-entry)
   - 格式：`entry: () => (Single Entry Syntax)|(Object Syntax)|Promise<(Single Entry Syntax)|(Object Syntax)>`
+  - 示例：
     ```
     entry: () => "./src/app"
     entry: () => ({ "app": "./src/app" })

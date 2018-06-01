@@ -8,7 +8,8 @@
     "dependencies": {
         "enhanced-resolve": "^4.0.0",
         "glob": "^7.1.2",
-        "tapable": "^1.0.0"
+        "tapable": "^1.0.0",
+        "webpack-sources": "^1.0.1"
     },
     "devDependencies": {
         "@types/node": "^10.1.4",

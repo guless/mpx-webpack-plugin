@@ -71,9 +71,24 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*! miniprogram: app */
+__webpack_require__(1);
+__webpack_require__(2);
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
-console.log("app");
+console.log("miniprogram X");
+
+/***/ }),
+/* 2 */
+/***/ (function(module) {
+
+module.exports = {};
 
 /***/ })
 /******/ ]);

@@ -33,7 +33,7 @@ npm i mpx-webpack-plugin --save-dev
 }
 ```
 
-> 小技巧：通过 `webpack --env.*` 可以添加自定的命令行参数，例如：我们可以通过 `webpack --env.target=<production|development>` 来代替以前使用 `cross-env NODE_ENV=<production|development> webpack` 来区分开发环境和生产环境。参考文档：[Environment Variables](https://webpack.js.org/guides/environment-variables/)
+> 💡小技巧：通过 `webpack --env.*` 可以添加自定的命令行参数，例如：我们可以通过 `webpack --env.target=<production|development>` 来代替以前使用 `cross-env NODE_ENV=<production|development> webpack` 来区分开发环境和生产环境。参考文档：[Environment Variables](https://webpack.js.org/guides/environment-variables/)
 
 配置 webpack.config.js
 ---------------------

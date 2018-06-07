@@ -11,6 +11,9 @@
 - [**mpvue**](https://github.com/Meituan-Dianping/mpvue) - 基于 Vue.js 的小程序开发框架，从底层支持 Vue.js 语法和构建工具体系。
 - [**wepy**](https://github.com/Tencent/wepy) - 小程序组件化开发框架。类 vue 风格，已经被官方(Tencent)收编。
 - [**wxapp-webpack-plugin**](https://github.com/Cap32/wxapp-webpack-plugin) - 📦 微信小程序 webpack 插件。也是单纯的 webpack 编译支持。
+- [**微信小程序开发文档**](https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html)
+- [**支付宝小程序开发文档**](https://docs.alipay.com/mini/framework/overview)
+- [**百度小程序开发文档**](https://smartapp.baidu.com/docs/develop/tutorial/index/)
 
 起步
 ----
@@ -123,11 +126,8 @@ module.exports = [
 
 ### Options 
 
- 类型      | 名称     | 默认值         | 说明
-----------|----------|---------------|--------------------
- {string} | name     | `"app"`       | 指定小程序入口点的名称。如果使用对象语法(Object Syntax)配置 `entry`，则插件通过该字段查找小程序的入口点。
- {string} | platform | `"wechat"`    | 指定运行的小程序平台，可选值：`["wechat", "alipay", "baidu"]`。<ul><li>`"wechat"`：微信小程序。</li><li>`"alipay"`：支付宝小程序。</li><li>`"baidu"`：百度小程序。</li></ul>
-  
-  
-文件解析规则(Resolver)
---------------------
+ 类型      | 名称                  | 默认值            | 说明
+----------|-----------------------|------------------|--------------------
+ {string} | name                  | `"app"`          | 指定小程序入口点的名称。如果使用对象语法(Object Syntax)配置 `entry`，则插件通过该字段查找小程序的入口点。
+ {string} | platform              | `"wechat"`       | 指定运行的小程序平台，可选值：`["wechat", "alipay", "baidu"]`。<ul><li>`"wechat"`：微信小程序。</li><li>`"alipay"`：支付宝小程序。</li><li>`"baidu"`：百度小程序。</li></ul>
+ {string} | outputNodeModulesPath | `"node_modules"` | 指定 `node_modules` 中的小程序模块的输出路径。

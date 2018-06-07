@@ -85,9 +85,49 @@ console.log("miniprogram X");
 
 /***/ }),
 /* 2 */
-/***/ (function(module) {
+/***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {"pages":["./pages/index"]};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(4);
+module.exports = __webpack_require__(5);
+
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+console.log("index page");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = {"usingComponents":{"tag-custom":"../components/custom"}};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(7);
+module.exports = __webpack_require__(8);
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+console.log("custom component");
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = {};
 
 /***/ })
 /******/ ]);

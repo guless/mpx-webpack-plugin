@@ -130,4 +130,3 @@ module.exports = [
 ----------|-----------------------|------------------|--------------------
  {string} | name                  | `"app"`          | 指定小程序入口点的名称。如果使用对象语法(Object Syntax)配置 `entry`，则插件通过该字段查找小程序的入口点。
  {string} | platform              | `"wechat"`       | 指定运行的小程序平台，可选值：`["wechat", "alipay", "baidu"]`。<ul><li>`"wechat"`：微信小程序。</li><li>`"alipay"`：支付宝小程序。</li><li>`"baidu"`：百度小程序。</li></ul>
- {string} | outputNodeModulesPath | `"node_modules"` | 指定 `node_modules` 中的小程序模块的输出路径。

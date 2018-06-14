@@ -7,9 +7,9 @@
 
 功能特点
 -------
-- 支持多个平台：微信小程序(Wechat)、支付宝小程序(Alipay)、百度小程序(Baidu)。
-- 支持 **Webpack** 所有的功能，包括但不限于插件(Plugins)、加载器(Loaders)、解析器(Resolvers)等。
-- 支持使用通过 `npm` 安装(`"node_modules"`)的小程序模块(页面，组件等)，也就是说我们可以开发通用的组件，然后发布到 `npm` 上提供给其他小程序使用。
+- 支持多个平台：微信小程序(wechat)、支付宝小程序(alipay)、百度小程序(baidu)。
+- 支持 [**webpack**](https://webpack.js.org/) 所有的功能，包括但不限于插件(plugins)、加载器(loaders)、解析器(resolvers)等。
+- 支持使用通过 `npm install` 安装的小程序模块(页面，组件等)，也就是说我们可以开发通用的组件，然后发布到 `npm` 上提供给其他小程序使用。
 
 相关资料
 -------

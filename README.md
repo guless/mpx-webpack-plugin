@@ -5,6 +5,12 @@
 > - 该插件仅支持 webpack@4.0 以上的版本。
 > - 该插件仅为使用原生小程序平台提供功能做 webpack 编译支持，因此不提供 `虚拟DOM(Visual DOM)` 支持。如果你喜欢 `VUE` 的开发模式，建议使用 [mpvue](https://github.com/Meituan-Dianping/mpvue) 等其他框架进行开发。
 
+功能特点
+-------
+- 支持多个平台：微信小程序(Wechat)、支付宝小程序(Alipay)、百度小程序(Baidu)。
+- 支持 **Webpack** 所有的功能，包括但不限于插件(Plugins)、加载器(Loaders)、解析器(Resolvers)等。
+- 支持使用通过 `npm` 安装(`"node_modules"`)的小程序模块(页面，组件等)，也就是说我们可以开发通用的组件，然后发布到 `npm` 上提供给其他小程序使用。
+
 相关资料
 -------
 - [**mpx-examples**](./examples) - `mpx-webpack-plugin` 插件示例项目。

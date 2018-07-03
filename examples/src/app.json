@@ -1,7 +1,6 @@
 {
     "pages": [
-        "./pages/index",
-        "atob"
+        "./pages/index"
     ],
     "tabBar": {
         "list": [

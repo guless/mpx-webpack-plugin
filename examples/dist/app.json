@@ -1,1 +1,1 @@
-{"pages":["pages/index","node_modules/atob/browser-atob"],"tabBar":{"list":[{"pagePath":"pages/index","iconPath":"assets/tabbar/ticket_4bf11d.png","selectedIconPath":"assets/tabbar/ticket-selected_0f45a3.png"}]}}
+{"pages":["pages/index"],"tabBar":{"list":[{"pagePath":"pages/index","iconPath":"./assets/tabbar/ticket_4bf11d.png","selectedIconPath":"./assets/tabbar/ticket-selected_0f45a3.png"}]}}

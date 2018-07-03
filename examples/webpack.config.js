@@ -18,15 +18,24 @@ module.exports = {
                     { "loader": MPXPlugin.loaders.JSON_LOADER }
                 ]
             },
-            { 
-                "test": /\.(?:png|jpe?g|gif|webp)(\?.*)?$/i, 
+            {
+                "test": /\.(s?css|wxss|acss)(\?.*)?$/i,
                 "use": [
                     { 
-                        "loader": "file-loader",
-                        "options": { 
-                            "name": "[path][name]_[hash:6].[ext]",
-                            "context": path.join(__dirname, "src") 
-                        } 
+                        "loader": MPXPlugin.loaders.FILE_LOADER, 
+                        "options": { "name": "[name].[ext:css]", "platform": "wechat", "context": path.join(__dirname, "src") } 
+                    },
+                    { "loader": "extract-loader" },
+                    { "loader": "css-loader" },
+                    { "loader": "sass-loader" },
+                ]
+            },
+            { 
+                "test": /\.(?:png|svg|jpe?g|gif|bmp|webp)(\?.*)?$/i, 
+                "use": [
+                    { 
+                        "loader": MPXPlugin.loaders.FILE_LOADER, 
+                        "options": { "name": "[name]_[hash:6].[ext]", "platform": "wechat", "context": path.join(__dirname, "src") } 
                     }
                 ] 
             }

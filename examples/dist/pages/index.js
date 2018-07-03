@@ -1,18 +1,23 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
+
+/***/ 16:
+/***/ (function(module, exports) {
+
+module.exports="./index.wxss";
+
+/***/ }),
+
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(6);
-module.exports = __webpack_require__(8);
+__webpack_require__(8);
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
-/* 6 */
+
+/***/ 6:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23,21 +28,32 @@ __webpack_require__.r(__webpack_exports__);
 console.log("index page");
 
 /***/ }),
-/* 7 */
+
+/***/ 7:
 /***/ (function(module, exports) {
 
 console.log("I am common");
 
 /***/ }),
-/* 8 */
+
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*! extracted miniprogram json: "index" */
 /* {
     "usingComponents": {
-        "tag-custom": "../components/custom"
+        "tag-custom": "../components/custom",
+        "tag-vendor": "../node_modules/miniprogram/dist/vendor"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "selectedIconPath": "./assets/tabbar/ticket-selected_0f45a3.png"
+            }
+        ]
     }
 } */
 
 /***/ })
-]]);
+
+}]);

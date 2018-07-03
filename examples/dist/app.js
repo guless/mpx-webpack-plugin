@@ -87,7 +87,7 @@ console.log("miniprogram X");
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {"pages":["./pages/index","atob"]};
+/*! extract json: app */
 
 /***/ }),
 /* 3 */,

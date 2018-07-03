@@ -19,7 +19,7 @@ console.log("custom component");
 /***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {};
+/*! extract json: custom */
 
 /***/ })
 

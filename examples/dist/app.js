@@ -74,18 +74,30 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(2);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _assets_tabbar_ticket_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _assets_tabbar_ticket_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_tabbar_ticket_png__WEBPACK_IMPORTED_MODULE_0__);
 console.log("miniprogram X");
-        
+
+
+console.log(_assets_tabbar_ticket_png__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/tabbar/ticket_4bf11d.png";
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*! extracted miniprogram json: "app" */
@@ -106,7 +118,6 @@ console.log("miniprogram X");
 } */
 
 /***/ }),
-/* 3 */,
 /* 4 */,
 /* 5 */,
 /* 6 */,
@@ -115,7 +126,8 @@ console.log("miniprogram X");
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */
+/* 12 */,
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -129,9 +141,9 @@ console.log("miniprogram X");
 
 
 
-var base64 = __webpack_require__(14)
-var ieee754 = __webpack_require__(15)
-var isArray = __webpack_require__(16)
+var base64 = __webpack_require__(15)
+var ieee754 = __webpack_require__(16)
+var isArray = __webpack_require__(17)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -1909,10 +1921,10 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(14)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
 var g;
@@ -1938,7 +1950,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2096,7 +2108,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -2186,7 +2198,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -2197,7 +2209,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {

@@ -16,6 +16,7 @@
     "devDependencies": {
         "@types/node": "^10.1.4",
         "@types/tapable": "^1.0.2",
+        "file-loader": "^1.1.11",
         "webpack": "^4.8.3",
         "webpack-cli": "^2.1.4"
     }

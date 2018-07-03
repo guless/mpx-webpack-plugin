@@ -1,6 +1,5 @@
 {
     "pages": [
-        "./pages/index",
-        "atob"
+        "./pages/index"
     ]
 }

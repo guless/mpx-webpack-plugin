@@ -30,7 +30,12 @@ console.log("I am common");
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*! extract json: index */
+/*! extracted miniprogram json: "index" */
+/* {
+    "usingComponents": {
+        "tag-custom": "../components/custom"
+    }
+} */
 
 /***/ })
 ]]);

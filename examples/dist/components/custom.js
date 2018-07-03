@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
 /***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
@@ -19,7 +19,8 @@ console.log("custom component");
 /***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
-/*! extract json: custom */
+/*! extracted miniprogram json: "custom" */
+/* {} */
 
 /***/ })
 

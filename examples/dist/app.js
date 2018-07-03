@@ -66,38 +66,27 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(1);
-module.exports = __webpack_require__(3);
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _assets_tabbar_ticket_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _assets_tabbar_ticket_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_tabbar_ticket_png__WEBPACK_IMPORTED_MODULE_0__);
-console.log("miniprogram X");
-
-
-console.log(_assets_tabbar_ticket_png__WEBPACK_IMPORTED_MODULE_0___default.a);
-
-/***/ }),
+/* 0 */,
+/* 1 */,
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/tabbar/ticket_4bf11d.png";
+__webpack_require__(3);
+module.exports = __webpack_require__(4);
+
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports) {
+
+console.log("miniprogram X");
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*! extracted miniprogram json: "app" */
@@ -110,15 +99,14 @@ module.exports = __webpack_require__.p + "assets/tabbar/ticket_4bf11d.png";
         "list": [
             {
                 "pagePath": "pages/index",
-                "iconPath": "./assets/tabbar/ticket.png",
-                "selectedIconPath": "./assets/tabbar/ticket-selected.png"
+                "iconPath": "assets/tabbar/ticket_4bf11d.png",
+                "selectedIconPath": "assets/tabbar/ticket-selected_0f45a3.png"
             }
         ]
     }
 } */
 
 /***/ }),
-/* 4 */,
 /* 5 */,
 /* 6 */,
 /* 7 */,
@@ -127,7 +115,8 @@ module.exports = __webpack_require__.p + "assets/tabbar/ticket_4bf11d.png";
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -141,9 +130,9 @@ module.exports = __webpack_require__.p + "assets/tabbar/ticket_4bf11d.png";
 
 
 
-var base64 = __webpack_require__(15)
-var ieee754 = __webpack_require__(16)
-var isArray = __webpack_require__(17)
+var base64 = __webpack_require__(16)
+var ieee754 = __webpack_require__(17)
+var isArray = __webpack_require__(18)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -1921,10 +1910,10 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(14)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(15)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 var g;
@@ -1950,7 +1939,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2108,7 +2097,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -2198,7 +2187,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -2209,7 +2198,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {

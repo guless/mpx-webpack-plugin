@@ -11,14 +11,20 @@ module.exports = {
     },
     "module": {
         "rules": [
+            {
+                "test": /\.json$/i,
+                "use": [
+                    { "loader": "extract-loader" },
+                    { "loader": MPXPlugin.loaders.JSON_LOADER }
+                ]
+            },
             { 
-                "test": /\.(png|jpe?g|gif|webp)(\?.*)?/i, 
+                "test": /\.(?:png|jpe?g|gif|webp)(\?.*)?$/i, 
                 "use": [
                     { 
-                        "loader": "file-loader", 
+                        "loader": "file-loader",
                         "options": { 
                             "name": "[path][name]_[hash:6].[ext]",
-                            "useRelative": true, 
                             "context": path.join(__dirname, "src") 
                         } 
                     }

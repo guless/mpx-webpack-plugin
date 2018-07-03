@@ -1,1 +1,1 @@
-{"pages":["/pages/index","/node_modules/atob/browser-atob"]}
+{"pages":["pages/index"],"tabBar":{"list":[{"pagePath":"pages/index","iconPath":"./assets/tabbar/ticket.png","selectedIconPath":"./assets/tabbar/ticket-selected.png"}]}}

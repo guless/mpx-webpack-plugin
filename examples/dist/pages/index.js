@@ -33,7 +33,7 @@ console.log("I am common");
 /*! extracted miniprogram json: "index" */
 /* {
     "usingComponents": {
-        "tag-custom": "../components/custom"
+        "tag-custom": "/components/custom"
     }
 } */
 

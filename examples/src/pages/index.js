@@ -1,2 +1,1 @@
-import "../common/common";
-console.log("index page");
+console.log("enter index");

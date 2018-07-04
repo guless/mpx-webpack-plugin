@@ -1,11 +1,12 @@
 {
     "pages": [
-        "./pages/index"
+        "./pages/index",
+        "./pages/discover"
     ],
     "tabBar": {
         "list": [
-            { "iconPath": "./assets/tabbar/ticket.png" },
-            { "pagePath": "./pages/index" }
+            { "pagePath": "./pages/index", "iconPath": "./assets/tabbar/ticket.png", "selectedIconPath": "./assets/tabbar/ticket-selected.png" },
+            { "pagePath": "./pages/discover", "iconPath": "./assets/tabbar/ticket.png", "selectedIconPath": "./assets/tabbar/ticket-selected.png" }
         ]
     }
 }

@@ -19,6 +19,22 @@ module.exports = {
                 ]
             },
             {
+                "test": /wxml/i,
+                "use": [
+                    {
+                        "loader": MPXPlugin.loaders.FILE_LOADER,
+                        "options": {
+                            "name": "[topname].[ext:html]",
+                            "context": path.join(__dirname, "src"), 
+                            "platform": MPXPlugin.platforms.WECHAT,
+                            "exportRelativePath": true,
+                        }
+                    },
+                    { "loader": "extract-loader" },
+                    { "loader": "html-loader" },
+                ]
+            },
+            {
                 "test": /\.(s?css|wxss|acss)(\?.*)?$/i,
                 "use": [
                     { 

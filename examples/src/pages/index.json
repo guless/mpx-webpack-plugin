@@ -1,11 +1,3 @@
 {
-    "usingComponents": {
-        "tag-custom": "../components/custom",
-        "tag-vendor": "miniprogram/dist/vendor"
-    },
-    "tabBar": {
-        "list": [
-            { "selectedIconPath": "../assets/tabbar/ticket-selected.png" }
-        ]
-    }
+    
 }

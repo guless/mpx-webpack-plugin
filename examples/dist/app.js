@@ -71,7 +71,7 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 17:
+/***/ 15:
 /***/ (function(module, exports) {
 
 module.exports = "./app.wxss";
@@ -83,7 +83,7 @@ module.exports = "./app.wxss";
 
 __webpack_require__(3);
 __webpack_require__(4);
-module.exports = __webpack_require__(17);
+module.exports = __webpack_require__(15);
 
 
 /***/ }),
@@ -101,15 +101,20 @@ console.log("miniprogram X");
 /*! extracted miniprogram json: "app" */
 /* {
     "pages": [
-        "pages/index"
+        "pages/index",
+        "pages/discover"
     ],
     "tabBar": {
         "list": [
             {
-                "iconPath": "/assets/tabbar/ticket_4bf11d.png"
+                "pagePath": "pages/index",
+                "iconPath": "/assets/tabbar/ticket_4bf11d.png",
+                "selectedIconPath": "/assets/tabbar/ticket-selected_0f45a3.png"
             },
             {
-                "pagePath": "pages/index"
+                "pagePath": "pages/discover",
+                "iconPath": "/assets/tabbar/ticket_4bf11d.png",
+                "selectedIconPath": "/assets/tabbar/ticket-selected_0f45a3.png"
             }
         ]
     }

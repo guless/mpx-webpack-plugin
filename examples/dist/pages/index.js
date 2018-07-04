@@ -3,7 +3,7 @@
 /***/ 16:
 /***/ (function(module, exports) {
 
-module.exports="./index.wxss";
+module.exports=""
 
 /***/ }),
 
@@ -48,7 +48,7 @@ console.log("I am common");
     "tabBar": {
         "list": [
             {
-                "selectedIconPath": "./assets/tabbar/ticket-selected_0f45a3.png"
+                "selectedIconPath": ""
             }
         ]
     }

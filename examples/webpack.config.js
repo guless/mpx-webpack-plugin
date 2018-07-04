@@ -23,7 +23,12 @@ module.exports = {
                 "use": [
                     { 
                         "loader": MPXPlugin.loaders.FILE_LOADER, 
-                        "options": { "name": "[name].[ext:css]", "platform": "wechat", "context": path.join(__dirname, "src") } 
+                        "options": { 
+                            "name": "[topname].[ext:css]", 
+                            "context": path.join(__dirname, "src"), 
+                            "platform": MPXPlugin.platforms.WECHAT,
+                            "exportRelativePath": true,
+                        } 
                     },
                     { "loader": "extract-loader" },
                     { "loader": "css-loader" },
@@ -35,13 +40,13 @@ module.exports = {
                 "use": [
                     { 
                         "loader": MPXPlugin.loaders.FILE_LOADER, 
-                        "options": { "name": "[name]_[hash:6].[ext]", "platform": "wechat", "context": path.join(__dirname, "src") } 
+                        "options": { "name": "[name]_[hash:6].[ext]", "platform": MPXPlugin.platforms.WECHAT, "context": path.join(__dirname, "src") } 
                     }
                 ] 
             }
         ]
     },
     "plugins": [
-        new MPXPlugin({ "platform": "wechat" })
+        new MPXPlugin({ "platform": MPXPlugin.platforms.WECHAT })
     ]
 }

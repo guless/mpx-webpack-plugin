@@ -4,7 +4,8 @@
     ],
     "tabBar": {
         "list": [
-            { "pagePath": "./pages/index", "iconPath": "./assets/tabbar/ticket.png", "selectedIconPath": "./assets/tabbar/ticket-selected.png" }
+            { "iconPath": "./assets/tabbar/ticket.png", "selectedIconPath": "./assets/tabbar/ticket-selected.png" },
+            { "pagePath": "./pages/index" }
         ]
     }
 }

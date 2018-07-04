@@ -69,24 +69,33 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */
+/******/ ({
+
+/***/ 17:
+/***/ (function(module, exports) {
+
+module.exports = "./app.wxss";
+
+/***/ }),
+
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-module.exports = __webpack_require__(4);
+__webpack_require__(4);
+module.exports = __webpack_require__(17);
 
 
 /***/ }),
-/* 3 */
+
+/***/ 3:
 /***/ (function(module, exports) {
 
 console.log("miniprogram X");
 
 /***/ }),
-/* 4 */
+
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*! extracted miniprogram json: "app" */
@@ -97,8 +106,7 @@ console.log("miniprogram X");
     "tabBar": {
         "list": [
             {
-                "iconPath": "",
-                "selectedIconPath": ""
+                "iconPath": "/assets/tabbar/ticket_4bf11d.png"
             },
             {
                 "pagePath": "pages/index"
@@ -108,4 +116,5 @@ console.log("miniprogram X");
 } */
 
 /***/ })
-/******/ ]);
+
+/******/ });

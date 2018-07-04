@@ -40,7 +40,13 @@ module.exports = {
                 "use": [
                     { 
                         "loader": MPXPlugin.loaders.FILE_LOADER, 
-                        "options": { "name": "[name]_[hash:6].[ext]", "platform": MPXPlugin.platforms.WECHAT, "context": path.join(__dirname, "src") } 
+                        
+                        "options": { 
+                            "name": "[name]_[hash:6].[ext]", 
+                            "publicPath": "/",
+                            "context": path.join(__dirname, "src"),
+                            "platform": MPXPlugin.platforms.WECHAT
+                        } 
                     }
                 ] 
             }

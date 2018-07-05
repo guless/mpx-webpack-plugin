@@ -78,6 +78,6 @@ module.exports = {
         ]
     },
     "plugins": [
-        new MPXPlugin({ "platform": MPXPlugin.platforms.WECHAT })
+        new MPXPlugin({ "platform": MPXPlugin.platforms.WECHAT, "chunks": ["runtime", "verdors"] })
     ]
 }

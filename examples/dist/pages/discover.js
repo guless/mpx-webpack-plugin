@@ -26,6 +26,12 @@ module.exports = __webpack_require__(16);
 
 console.log("enter discover");
 
+Page({
+    onLoad() {
+        console.log("invoke discover.onload")
+    }
+ });
+
 /***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {

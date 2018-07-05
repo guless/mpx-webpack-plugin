@@ -21,6 +21,12 @@ module.exports = __webpack_require__(11);
 
 console.log("enter index");
 
+Page({
+   onLoad() {
+       console.log("invoke index.onload")
+   }
+});
+
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {

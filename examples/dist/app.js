@@ -27,6 +27,12 @@ module.exports = __webpack_require__(17);
 __webpack_require__(4);
 console.log("enter app");
 
+App({
+    onLaunch() {
+        console.log("invoke app onlaunch");
+    }
+});
+
 /***/ }),
 
 /***/ 6:

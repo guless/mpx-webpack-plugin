@@ -137,3 +137,4 @@ module.exports = [
 ----------|-----------------------|------------------|--------------------
  {string} | name                  | `"app"`          | 指定小程序入口点的名称。如果使用对象语法(Object Syntax)配置 `entry`，则插件通过该字段查找小程序的入口点。
  {string} | platform              | `"wechat"`       | 指定运行的小程序平台，可选值：`["wechat", "alipay", "baidu"]`。<ul><li>`"wechat"`：微信小程序。</li><li>`"alipay"`：支付宝小程序。</li><li>`"baidu"`：百度小程序。</li></ul>
+ {Array&lt;string&gt;} | chunks   | `undefined`      | 当使用 `splitChunks` 分离公共模块后，通过 `chunks` 将公共模块插入到 `app.js` 之前。

@@ -1,9 +1,8 @@
-/*! MPXLoadChunksPlugin: load chunks */
+/*! MPX_LOAD_CHUNKS_PLUGIN CHUNKS INJECTION */
 require("./runtime");
 require("./verdors");
 
-exports.ids = [0];
-exports.modules = {
+(function( context ) { if ( context && context["webpackJsonp"] ) { context["webpackJsonp"]([0],{
 
 /***/ 17:
 /***/ (function(module, exports) {
@@ -26,6 +25,7 @@ module.exports = __webpack_require__(17);
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(4);
+console.log("enter app");
 
 /***/ }),
 
@@ -56,4 +56,4 @@ __webpack_require__(4);
 
 /***/ })
 
-};;;
+},[2])}})((typeof global !== "undefined" ? global : typeof window !== "undefined" ? window : this) || (new Function("return this"))());;

@@ -1,5 +1,4 @@
-exports.ids = [1];
-exports.modules = [
+(function( context ) { if ( context && context["webpackJsonp"] ) { context["webpackJsonp"]([1],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -42,4 +41,4 @@ module.exports = "./index.wxss";
 module.exports = "./index.wxml";
 
 /***/ })
-];;
+],[7])}})((typeof global !== "undefined" ? global : typeof window !== "undefined" ? window : this) || (new Function("return this"))());

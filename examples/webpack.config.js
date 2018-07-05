@@ -3,7 +3,6 @@ const path = require("path");
 
 module.exports = {
     "mode": "none",
-    "target": () => {},
     "context": __dirname,
     "entry": "./src/app",
     "output": {

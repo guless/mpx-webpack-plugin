@@ -1,1 +1,1 @@
-console.log("miniprogram X");
+require("path");

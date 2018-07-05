@@ -3,11 +3,21 @@ const path = require("path");
 
 module.exports = {
     "mode": "none",
+    "target": () => {},
     "context": __dirname,
     "entry": "./src/app",
     "output": {
         "path": path.resolve(__dirname, "./dist"),
-        "filename": "[name].js"
+        "filename": "[name].js",
+    },
+    "optimization": {
+        "splitChunks": { 
+            "chunks": "all",
+            "name": "verdors"
+        },
+        "runtimeChunk": {
+            "name": "runtime"
+        },
     },
     "module": {
         "rules": [
@@ -19,7 +29,7 @@ module.exports = {
                 ]
             },
             {
-                "test": /wxml/i,
+                "test": /\.(html|w?xml|a?xml|swan)(\?.*)?$/i,
                 "use": [
                     {
                         "loader": MPXPlugin.loaders.FILE_LOADER,
@@ -56,7 +66,6 @@ module.exports = {
                 "use": [
                     { 
                         "loader": MPXPlugin.loaders.FILE_LOADER, 
-                        
                         "options": { 
                             "name": "[name]_[hash:6].[ext]", 
                             "publicPath": "/",

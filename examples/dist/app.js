@@ -1,3 +1,7 @@
+/*! MPXLoadChunksPlugin: load chunks */
+require("./runtime");
+require("./verdors");
+
 exports.ids = [0];
 exports.modules = {
 
@@ -52,4 +56,4 @@ __webpack_require__(4);
 
 /***/ })
 
-};;
+};;;

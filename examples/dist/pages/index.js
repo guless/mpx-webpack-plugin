@@ -31,7 +31,7 @@ Page({
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*! extracted miniprogram json: "index" */
+/* extracted miniprogram json => "index" */
 /* {} */
 
 /***/ }),

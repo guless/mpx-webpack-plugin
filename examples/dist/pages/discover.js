@@ -36,7 +36,7 @@ Page({
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*! extracted miniprogram json: "discover" */
+/* extracted miniprogram json => "discover" */
 /* {} */
 
 /***/ }),

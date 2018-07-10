@@ -12,7 +12,7 @@ module.exports = {
     "optimization": {
         "splitChunks": { 
             "chunks": "all",
-            "name": "verdors"
+            "name": "vendors"
         },
         "runtimeChunk": {
             "name": "runtime"
@@ -35,7 +35,6 @@ module.exports = {
                         "options": {
                             "name": "[topname].[ext:html]",
                             "context": path.join(__dirname, "src"), 
-                            "platform": MPXPlugin.platforms.WECHAT,
                             "exportRelativePath": true,
                         }
                     },
@@ -50,8 +49,7 @@ module.exports = {
                         "loader": MPXPlugin.loaders.FILE_LOADER, 
                         "options": { 
                             "name": "[topname].[ext:css]", 
-                            "context": path.join(__dirname, "src"), 
-                            "platform": MPXPlugin.platforms.WECHAT,
+                            "context": path.join(__dirname, "src"),
                             "exportRelativePath": true,
                         } 
                     },
@@ -68,8 +66,7 @@ module.exports = {
                         "options": { 
                             "name": "[name]_[hash:6].[ext]", 
                             "publicPath": "/",
-                            "context": path.join(__dirname, "src"),
-                            "platform": MPXPlugin.platforms.WECHAT
+                            "context": path.join(__dirname, "src")
                         } 
                     }
                 ] 
@@ -77,6 +74,6 @@ module.exports = {
         ]
     },
     "plugins": [
-        new MPXPlugin({ "platform": MPXPlugin.platforms.WECHAT, "chunks": ["runtime", "verdors"] })
+        new MPXPlugin({ "platform": MPXPlugin.platforms.WECHAT, "chunks": ["runtime", "vendors"] })
     ]
 }

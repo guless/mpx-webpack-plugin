@@ -1,6 +1,6 @@
-/*! MPX_LOAD_CHUNKS_PLUGIN CHUNKS INJECTION */
+/* MPX_LOAD_CHUNKS_PLUGIN CHUNKS INJECTION */
 require("./runtime");
-require("./verdors");
+require("./vendors");
 
 (function( context ) { if ( context && context["webpackJsonp"] ) { context["webpackJsonp"]([0],{
 
@@ -38,7 +38,7 @@ App({
 /***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
-/*! extracted miniprogram json: "app" */
+/* extracted miniprogram json => "app" */
 /* {
     "pages": [
         "pages/index",

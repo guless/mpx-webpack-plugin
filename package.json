@@ -1,11 +1,23 @@
 {
     "name": "mpx-webpack-plugin",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "main": "index.js",
     "scripts": {
         "watch": "npm run build -- --watch",
         "build": "webpack --config=./examples/webpack.config.js"
     },
+    "author": "Samlv9@live.com",
+    "license": "MIT",
+    "repository": "guless/mpx-webpack-plugin",
+    "keywords": [
+        "mini-programs",
+        "wechat-app",
+        "alipay-app",
+        "baidu-app",
+        "light-app",
+        "webpack-plugin",
+        "webpack-loader"
+    ],
     "dependencies": {
         "enhanced-resolve": "^4.0.0",
         "glob": "^7.1.2",

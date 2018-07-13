@@ -1,3 +1,4 @@
+require("../common/util");
 console.log("enter index");
 
 Page({

@@ -1,4 +1,5 @@
 require("path");
+require("./common/util");
 console.log("enter app");
 
 App({

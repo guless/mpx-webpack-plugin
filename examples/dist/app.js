@@ -4,7 +4,7 @@ require("./vendors");
 
 (function( context ) { if ( context && context["webpackJsonp"] ) { context["webpackJsonp"]([0],{
 
-/***/ 17:
+/***/ 18:
 /***/ (function(module, exports) {
 
 module.exports = "./app.wxss";
@@ -15,8 +15,8 @@ module.exports = "./app.wxss";
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-__webpack_require__(6);
-module.exports = __webpack_require__(17);
+__webpack_require__(7);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
@@ -25,6 +25,7 @@ module.exports = __webpack_require__(17);
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(4);
+__webpack_require__(6);
 console.log("enter app");
 
 App({
@@ -36,6 +37,15 @@ App({
 /***/ }),
 
 /***/ 6:
+/***/ (function(module, exports) {
+
+module.exports = function util() {
+    console.log("I am util");
+}
+
+/***/ }),
+
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* extracted miniprogram json => "app" */

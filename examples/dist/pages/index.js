@@ -6,7 +6,8 @@
 /* extracted miniprogram json => "index" */
 /* {
     "usingComponents": {
-        "custom": "../components/custom"
+        "custom": "../components/custom",
+        "plugin": "plugin://PLUGIN_NAME/PLUGIN_PAGE"
     }
 } */
 

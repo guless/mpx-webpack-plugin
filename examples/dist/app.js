@@ -4,20 +4,20 @@ require("./vendors");
 
 (function( context ) { if ( context && context["webpackJsonp"] ) { context["webpackJsonp"]([0],{
 
-/***/ 18:
-/***/ (function(module, exports) {
-
-module.exports = "./app.wxss";
-
-/***/ }),
-
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
 __webpack_require__(7);
-module.exports = __webpack_require__(18);
+module.exports = __webpack_require__(23);
 
+
+/***/ }),
+
+/***/ 23:
+/***/ (function(module, exports) {
+
+module.exports = "./app.wxss";
 
 /***/ }),
 
